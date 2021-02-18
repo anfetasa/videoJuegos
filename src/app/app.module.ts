@@ -12,6 +12,7 @@ import { LoginUserComponent } from './login-user/login-user.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PublicarComponent } from './publicar/publicar.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PublicarComponent } from './publicar/publicar.component';
     LoginUserComponent,
     CarritoComponent,
     NavbarComponent,
-    PublicarComponent
+    PublicarComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

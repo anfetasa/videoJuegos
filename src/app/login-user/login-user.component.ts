@@ -31,20 +31,22 @@ export class LoginUserComponent implements OnInit {
     
     if (this.form.valid) {
 
-      let data = {
+      this.load = false;
+      this.client.postRequest(`${environment.BASE_API}/user/login`,{
         correo: this.form.value.correo,
         contraseña: this.form.value.contraseña,
-      }
-  
-      this.load = false;
-      this.client.postRequest(`${environment.BASE_API}/user/login`, data).subscribe(
+      }).subscribe(
 
         (response: any) => {
           this.load = true;
+          console.log(response);
+
+          localStorage.setItem('token', response.token)
+          console.log(localStorage.getItem('token'))
 
 
           Swal.fire({
-            icon: 'succes',
+            icon: 'success',
             title: 'Has iniciado sesion correctamente',
             showConfirmButton: true,
             confirmButtonText: `Ok`

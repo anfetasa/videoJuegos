@@ -32,18 +32,17 @@ export class RegisterUserComponent implements OnInit {
     
     
     if (this.form.valid) {
-
-      let data = {
-        nombre: this.form.value.nombre,
-        correo: this.form.value.correo,
-        contraseña: this.form.value.contraseña,
-      }
   
       this.load = false;
-      this.client.postRequest(`${environment.BASE_API}/user/register`, data).subscribe(
+      this.client.postRequest(`${environment.BASE_API}/user/register`,{
+        nombre: this.form.value.nombre,
+        correo: this.form.value.correo,
+        contraseña: this.form.value.contraseña
+      }).subscribe(
 
         (response: any) => {
-          this.load = true;
+          console.log(response);
+          this.route.navigate( ['/login']);
 
 
           Swal.fire({
@@ -57,7 +56,7 @@ export class RegisterUserComponent implements OnInit {
             //Read more about isConfirmed, isDenied below
             if (result.isConfirmed) {
               this.route.navigate( ['/login'])
-            } 
+            }
           })
           
         
@@ -65,7 +64,7 @@ export class RegisterUserComponent implements OnInit {
       },
       (error) => {
         //this.load = true;
-        console.log(error.status);
+        console.log("error del usuario", error.status);
 
       })
       
