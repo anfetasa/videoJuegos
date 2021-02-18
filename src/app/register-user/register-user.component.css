@@ -190,3 +190,8 @@ form input[type="submit"]:active {
     cursor:wait;
     border-radius: 10px;
 }
+
+
+load{
+    float: left;
+}
