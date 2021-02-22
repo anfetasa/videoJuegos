@@ -3,6 +3,7 @@
 
 
 body{
+    font-family: 'Balsamiq Sans', cursive;
     margin-top: 1px;
     margin: auto;
     position: absolute;
@@ -17,51 +18,57 @@ body{
     margin: auto;
     width: 100%;
     position:relative;
-    height: 28%;
+    height: 16%;
     background-color: rgb(24, 23, 23);
     border-width: 10px;
-    border-color: black;
-    border-style: solid;
     padding: auto;
-    
+
+}
+.field {
+  display:flex;
+  position:realtive;
+  margin:auto;
+  width:95%;
+  flex-direction:row;
+  box-shadow:
+  1px 1px 0 rgb(22, 160, 133),
+  2px 2px 0 rgb(22, 160, 133),
+  3px 3px 0 rgb(22, 160, 133),
+  4px 4px 0 rgb(22, 160, 133),
+  5px 5px 0 rgb(22, 160, 133),
+  6px 6px 0 rgb(22, 160, 133),
+  7px 7px 0 rgb(22, 160, 133)
+  ;
 }
 
-.field {
-    display:flex;
-    position:realtive;
-    margin:auto;
-    width:95%;
-    flex-direction:row;
-    box-shadow:
-     1px 1px 0 rgb(22, 160, 133),
-     2px 2px 0 rgb(22, 160, 133),
-     3px 3px 0 rgb(22, 160, 133),
-     4px 4px 0 rgb(22, 160, 133),
-     5px 5px 0 rgb(22, 160, 133),
-     6px 6px 0 rgb(22, 160, 133),
-     7px 7px 0 rgb(22, 160, 133)
-    ;
-  }
-  
-  .field>input[type=text],
-  .field>button {
-    display:block;
-    font:1.2em 'Montserrat Alternates';
-  }
-  
-  .field>input[type=text] {
-    flex:1;
-    padding:0.6em;
-    border:0.2em solid rgb(26, 188, 156);
-  }
-  
-  .field>button {
-    padding:0.6em 0.8em;
-    background-color:rgb(26, 188, 156);
-    color:white;
-    border:none;
-  }
-  
+.field>input[type=text],
+.field>button {
+  display:block;
+  font:1.2em 'Montserrat Alternates';
+}
+
+.field>input[type=text] {
+  flex:1;
+  padding:0.6em;
+  border:0.2em solid rgb(26, 188, 156);
+}
+
+.field>button {
+  padding:0.6em 0.8em;
+  background-color:rgb(26, 188, 156);
+  color:white;
+  border:none;
+}
+
+.field>input:hover{
+  box-shadow: 0 0 20px #4f9;
+}
+
+.field>button:hover{
+  box-shadow: 0 0 20px #4f9;
+}
+
+
   .busqueda{
       margin-left: 18%;
       margin-right: auto;
@@ -69,17 +76,16 @@ body{
       padding: 0px;
       width: 60%;
       height: 200px;
-      
-      
+
+
   }
 
   .myButton {
-	box-shadow: 3px 4px 0px 0px #29bbff;
-	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-	background-color:#2dabf9;
+
+  background-color: #740cb1;
 	border-radius:18px;
-	border:1px solid #ffffff;
-    width: 155px;
+  border:1px solid #941df5;
+  width: 200px;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -87,12 +93,11 @@ body{
 	font-size:17px;
 	padding:7px ;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #263666;
-    
+
 }
 .myButton:hover {
-	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
-	background-color:#0688fa;
+	background:linear-gradient(to bottom, #8c06fa 5%, #bf2df9 100%);
+	background-color:#8c06fa;
 }
 .myButton:active {
 	position:relative;
@@ -111,7 +116,7 @@ body{
     background-color: rgb(82, 82, 82);
     width: 100%;
     position:absolute;
-    height: 52%;
+    height: 60%;
     padding: 10px;
     margin: auto;
 }
@@ -125,11 +130,10 @@ body{
     left:0px; /*A la derecha deje un espacio de 0px*/
     right:0px; /*A la izquierda deje un espacio de 0px*/
     bottom:0px; /*Abajo deje un espacio de 0px*/
-    height:20%; /*alto del div*/
+    height:15%; /*alto del div*/
     z-index:0;
     border-width: 10px;
-    border-color: black;
-    border-style: solid;
+    align-items: center;
 }
 
 .txtCategorias{
@@ -153,27 +157,20 @@ body{
 }
 .icon{
     color: white;
-    
+
+
 }
 
 .contenedor{
     width: 70%;
-    height: 98.5%;
+    height: 100%;
     margin: auto;
-    padding: 10px;
-    background-color: white;
-    border-radius: 15px;
-    border-width: 3px;
-    border-color: black;
-    border-style: solid;
-    border-radius: 10px;
+    padding: 0px;
 }
 
 .carrito{
-    width: 98%;
-    height: 98%;
-  
-
+    width: 100%;
+    height: 100%;
     margin: auto;
 }
 
@@ -186,9 +183,10 @@ body{
 .celda2{
     padding: 0%;
     width: 20%;
-
-
     text-align: center;
+    padding:0.6em 0.8em;
+    color:white;
+
 }
 .txtTitulo{
     margin-top:5%;
@@ -201,6 +199,7 @@ body{
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
     color: black;
+    padding-left: 30%;
 }
 .degradado1{
     background: rgba(179,220,237,1);
@@ -212,11 +211,11 @@ body{
     background: linear-gradient(to right, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1 );
     border-width: 5px;
-    border-color: black;
+    border-color: rgba(41,184,229,1);
     border-style: solid;
 }
 
-.degradado2{
+.degradado1:hover{
     background: rgba(241,231,103,1);
     background: -moz-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241,231,103,1)), color-stop(100%, rgba(254,182,69,1)));
@@ -226,7 +225,7 @@ body{
     background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1 );
     border-width: 5px;
-border-color: black;
+border-color: rgba(254,182,69,1);
 border-style: solid;
 }
 
@@ -240,6 +239,9 @@ border-style: solid;
     background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1 );
 border-width: 5px;
-border-color: black;
 border-style: solid;
+}
+
+.degradado3:hover{
+  border-color: rgba(255, 255, 255, 0.507);
 }

@@ -1,244 +1,288 @@
 body{
-    font-family: 'Balsamiq Sans', cursive;
+  font-family: 'Balsamiq Sans', cursive;
+  color: #ccc;
+
+  background-color: rgb(24, 23, 23);
+  height: 100%;
 }
 fieldset{
-    height: 800px;
-    width: 900px;
-    border: none;
+  height: 800px;
+  width: 900px;
+  border: none;
 }
 .algo{
-    width: 60%;
-    border: 5px #000000 solid;
-    columns: 2;
-    border-radius: 10px;
+  width: 60%;
+  border: 5px #ccc solid;
+  columns: 2;
+  border-radius: 10px;
+
 }
 
 .perro{
 
-    padding: 9px;
+  padding: 9px;
 }
 
 .gato{
-    
-    padding-right: 9px;
-    width: 99%;
+
+  padding-right: 9px;
+  width: 99%;
 
 }
 /* #region */
 .labelsex{
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .formPersonal span{
-    display: block;
-    margin-bottom: 20px;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .formPersonal .labelsex{
-    padding: 6px 30px 10px ;
-    border-radius: 20px;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    box-shadow:
-    1px 1px 0 rgb(0, 0, 0),
-    2px 2px 0 rgb(0, 0, 0),
-    3px 3px 0 rgb(0, 0, 0),
-    4px 4px 0 rgb(0, 0, 0),
-    5px 5px 0 rgb(0, 0, 0),
-    6px 6px 0 rgb(0, 0, 0)
+  padding: 6px 30px 10px ;
+  border-radius: 20px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow:
+  1px 1px 0 rgb(0, 0, 0),
+  2px 2px 0 rgb(0, 0, 0),
+  3px 3px 0 rgb(0, 0, 0),
+  4px 4px 0 rgb(0, 0, 0),
+  5px 5px 0 rgb(0, 0, 0),
+  6px 6px 0 rgb(0, 0, 0)
 ;
 }
 
 .boxOp:checked + label{
-    background: rgb(168, 168, 168);
-    color: white;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    box-shadow:
-    1px 1px 0 rgb(0, 0, 0),
-    2px 2px 0 rgb(0, 0, 0),
-    3px 3px 0 rgb(0, 0, 0),
-    4px 4px 0 rgb(0, 0, 0),
-    5px 5px 0 rgb(0, 0, 0),
-    6px 6px 0 rgb(0, 0, 0)
+  background: rgb(168, 168, 168);
+  color: white;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow:
+  1px 1px 0 rgb(0, 0, 0),
+  2px 2px 0 rgb(0, 0, 0),
+  3px 3px 0 rgb(0, 0, 0),
+  4px 4px 0 rgb(0, 0, 0),
+  5px 5px 0 rgb(0, 0, 0),
+  6px 6px 0 rgb(0, 0, 0)
 ;
 }
 
 .boxOp{
-    display: none;
-    border-radius: 10px;
-    box-shadow:
-    1px 1px 0 rgb(0, 0, 0),
-    2px 2px 0 rgb(0, 0, 0),
-    3px 3px 0 rgb(0, 0, 0),
-    4px 4px 0 rgb(0, 0, 0),
-    5px 5px 0 rgb(0, 0, 0),
-    6px 6px 0 rgb(0, 0, 0)
+  display: none;
+  border-radius: 10px;
+  box-shadow:
+  1px 1px 0 rgb(0, 0, 0),
+  2px 2px 0 rgb(0, 0, 0),
+  3px 3px 0 rgb(0, 0, 0),
+  4px 4px 0 rgb(0, 0, 0),
+  5px 5px 0 rgb(0, 0, 0),
+  6px 6px 0 rgb(0, 0, 0)
 ;
 }
 /* #endregion */
 
+.navbar-nav{
+  margin-left: 18%;
+  margin-right: auto;
+  text-align:left;
+  padding: 0px;
+  width: 15%;
 
+
+
+}
 #cuadroletra1{
-    font-size: 25px ;
+  font-size: 25px ;
+  width: 80%;
+  align-content: center;
+  background-color: rgb(24, 23, 23);
+}
+
+#cuadroletra1 h1{
+padding-left: 50%;
+padding-top: 2%;
+}
+
+#cuadroletra1 h2{
+padding-bottom: 2%;
 }
 
 #letrasw{
-    top: 11%;
-    left: 5%;
-    font-size: 40px;
+  top: 11%;
+  left: 5%;
+  font-size: 40px;
 }
 
 
 #imagenAYP{
-    height: 920px;
-    padding: 10px;
+  height: 920px;
+  padding: 10px;
 }
 
 #imagenLogo{
-    height: 50px;
-    position: fixed;
-    top: 92%;
-    right: 96%;
+  height: 50px;
+  position: fixed;
+  top: 92%;
+  right: 96%;
+  background-color: aliceblue;
+  border-radius: 5px;
 }
 
 #diniciar{
-    font-size: 24px;
-    background-color: #8000ff;
-    padding: 30px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow:
-    1px 1px 0 rgb(0, 0, 0),
-    2px 2px 0 rgb(0, 0, 0),
-    3px 3px 0 rgb(0, 0, 0),
-    4px 4px 0 rgb(0, 0, 0),
-    5px 5px 0 rgb(0, 0, 0),
-    6px 6px 0 rgb(0, 0, 0),
-    7px 7px 0 rgb(0, 0, 0)
+  font-size: 24px;
+  background-color: #8000ff;
+  padding: 30px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow:
+  1px 1px 0 rgb(0, 0, 0),
+  2px 2px 0 rgb(0, 0, 0),
+  3px 3px 0 rgb(0, 0, 0),
+  4px 4px 0 rgb(0, 0, 0),
+  5px 5px 0 rgb(0, 0, 0),
+  6px 6px 0 rgb(0, 0, 0),
+  7px 7px 0 rgb(0, 0, 0)
 }
 
 #diniciar:hover {
-    background-color: #6e20bb;
-    border-bottom: none;
-    padding: 30px;
-    width: 300px;
-    border-radius: 10px;
+  background-color: #6e20bb;
+  border-bottom: none;
+  padding: 30px;
+  width: 300px;
+  border-radius: 10px;
 }
 
 #imagencarat{
-    width: 156px;
+  width: 156px;
 }
 
 .div-precio{
-    width: 100%;
+  width: 100%;
 }
 
 #monedap{
-    width: 50%;
+  width: 50%;
 }
 
 #monedac{
-    width: 50%;
+  width: 100%;
 }
 
 .tipo:checked + label{
-    border: none;
-    box-shadow:
-    1px 1px 0 rgb(255, 255, 255),
-    2px 2px 0 rgb(255, 255, 255)
+  border: none;
+  box-shadow:
+  1px 1px 0 rgb(255, 255, 255),
+  2px 2px 0 rgb(255, 255, 255)
 ;
 }
 
 .tipolabel{
-    border: none;
-    box-shadow:
-    1px 1px 0 rgb(255, 255, 255),
-    2px 2px 0 rgb(255, 255, 255)
+  border: none;
+  box-shadow:
+  1px 1px 0 rgb(255, 255, 255),
+  2px 2px 0 rgb(255, 255, 255)
 ;
 }
 
 .selectP{
-    padding: 14px;
-    margin: 20px 0;
-    border-radius: 10px;
-    border: 5px #000000 solid;
-    font-family: 'Balsamiq Sans', cursive;
+  padding: 14px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 5px #000000 solid;
+  font-family: 'Balsamiq Sans', cursive;
 }
 
 
 .opcionesG{
-    padding-top: -30px;
-    
+columns: 2;
+width: 100%;
+padding: 5%;
 }
 .flex-container{
-    display: flex;
-    justify-content:left;
-    background-color: white;
+  display: flex;
+  justify-content:left;
+  background-color: rgb(82, 82, 82) ;
 
 }
 
 .form {
-    text-align: left;
-    padding: 40px;
-    padding-right: 90px;
-    
+  text-align: left;
+  padding: 40px;
+  padding-right: 90px;
+
 }
 
 .form__input{
-    width: 90%;
-    padding: 14px;
-    margin: 20px 0;
-    border: none;
-    border: 5px #000000 solid;
-
-    border-radius: 10px;
-    font-family: 'Balsamiq Sans', cursive;
+  width: 60%;
+  padding: 14px;
+  margin: 20px 0;
+  border: none;
+  border: 5px #000000 solid;
+  border-radius: 10px;
+  font-family: 'Balsamiq Sans', cursive;
 }
 
 .form__input:focus{
-    outline: none;
-    border-bottom: 5px #8000ff solid;
-    border-radius: 10px;
+  outline: none;
+  border-bottom: 5px #8000ff solid;
+  border-radius: 10px;
 }
 
 .img-container{
-    padding-top: -10%;
+  padding-top: -10%;
 }
 
 .img-container img {
-    width: 100%;
+  width: 100%;
 }
 
 form input[type="submit"] {
-    background-color: #8000ff;
-    padding: 30px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow:
-    1px 1px 0 rgb(0, 0, 0),
-    2px 2px 0 rgb(0, 0, 0),
-    3px 3px 0 rgb(0, 0, 0),
-    4px 4px 0 rgb(0, 0, 0),
-    5px 5px 0 rgb(0, 0, 0),
-    6px 6px 0 rgb(0, 0, 0),
-    7px 7px 0 rgb(0, 0, 0)
+  background-color: #8000ff;
+  padding: 30px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow:
+  1px 1px 0 rgb(0, 0, 0),
+  2px 2px 0 rgb(0, 0, 0),
+  3px 3px 0 rgb(0, 0, 0),
+  4px 4px 0 rgb(0, 0, 0),
+  5px 5px 0 rgb(0, 0, 0),
+  6px 6px 0 rgb(0, 0, 0),
+  7px 7px 0 rgb(0, 0, 0)
 ;
 }
 
 form input[type="submit"]:hover {
-    background-color: #6e20bb;
-    border-bottom: none;
-    padding: 30px;
-    width: 300px;
-    border-radius: 10px;
+  background-color: #6e20bb;
+  border-bottom: none;
+  padding: 30px;
+  width: 300px;
+  border-radius: 10px;
 }
 
 form input[type="submit"]:active {
-    background-color: #6e20bb;
-    border-bottom: none;
-    padding: 30px;
-    width: 300px;
-    cursor:wait;
-    border-radius: 10px;
+  background-color: #6e20bb;
+  border-bottom: none;
+  padding: 30px;
+  width: 300px;
+  cursor:wait;
+  border-radius: 10px;
+}
+
+.footer{
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(24, 23, 23);
+  margin: auto;
+  display: flex;
+  position:absolute; /*El div será ubicado con relación a la pantalla*/
+  left:0px; /*A la derecha deje un espacio de 0px*/
+  right:0px; /*A la izquierda deje un espacio de 0px*/
+  bottom:0px; /*Abajo deje un espacio de 0px*/
+  height:15%; /*alto del div*/
+  z-index:0;
+  border-width: 10px;
+  align-items: center;
 }

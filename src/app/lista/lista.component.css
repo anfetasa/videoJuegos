@@ -1,6 +1,7 @@
 @import url('http://fonts.googleapis.com/css?family=Montserrat+Alternates');
 
 body{
+  font-family: 'Balsamiq Sans', cursive;
     margin-top: 1px;
     margin: auto;
     position: absolute;
@@ -11,17 +12,15 @@ body{
     padding:0;
 }
 .header{
-    display: flex;
-    margin: auto;
-    width: 100%;
-    position:relative;
-    height: 28%;
-    background-color: rgb(24, 23, 23);
-    border-width: 10px;
-    border-color: black;
-    border-style: solid;
-    padding: auto;
-    
+  display: flex;
+  margin: auto;
+  width: 100%;
+  position:relative;
+  height: 16%;
+  background-color: rgb(24, 23, 23);
+  border-width: 10px;
+  padding: auto;
+
 }
 
 .field {
@@ -40,26 +39,35 @@ body{
      7px 7px 0 rgb(22, 160, 133)
     ;
   }
-  
+
   .field>input[type=text],
   .field>button {
     display:block;
     font:1.2em 'Montserrat Alternates';
   }
-  
+
   .field>input[type=text] {
     flex:1;
     padding:0.6em;
     border:0.2em solid rgb(26, 188, 156);
   }
-  
+
+  .field>input:hover{
+    box-shadow: 0 0 20px #4f9;
+  }
+
+  .field>button:hover{
+    box-shadow: 0 0 20px #4f9;
+  }
+
+
   .field>button {
     padding:0.6em 0.8em;
     background-color:rgb(26, 188, 156);
     color:white;
     border:none;
   }
-  
+
   .busqueda{
       margin-left: 18%;
       margin-right: auto;
@@ -67,30 +75,33 @@ body{
       padding: 0px;
       width: 60%;
       height: 200px;
-      
-      
+
+
   }
 
+  a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
   .myButton {
-	box-shadow: 3px 4px 0px 0px #29bbff;
-	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-	background-color:#2dabf9;
-	border-radius:18px;
-	border:1px solid #ffffff;
-    width: 155px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:7px ;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #263666;
-    
+    background-color: #740cb1;
+    border-radius:18px;
+    border:1px solid #941df5;
+      width: 155px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:7px ;
+    text-decoration:none;
+
+
 }
 .myButton:hover {
-	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
-	background-color:#0688fa;
+	background:linear-gradient(to bottom, #8c06fa 5%, #bf2df9 100%);
+	background-color:#8c06fa;
+
 }
 .myButton:active {
 	position:relative;
@@ -106,28 +117,27 @@ body{
     float: left;
 }
 .cuerpo{
-    background-color: rgb(82, 82, 82);
-    width: 100%;
-    position:absolute;
-    height: 52%;
-    padding: 5px;
-    margin: auto;
+  background-color: rgb(82, 82, 82);
+  width: 100%;
+  position:absolute;
+  height: 75%;
+  padding: 10px;
+  margin: auto;
 }
 .footer{
-    width: 100%;
-    padding: 20px;
-    background-color: rgb(24, 23, 23);
-    margin: auto;
-    display: flex;
-    position:absolute; /*El div será ubicado con relación a la pantalla*/
-    left:0px; /*A la derecha deje un espacio de 0px*/
-    right:0px; /*A la izquierda deje un espacio de 0px*/
-    bottom:0px; /*Abajo deje un espacio de 0px*/
-    height:20%; /*alto del div*/
-    z-index:0;
-    border-width: 10px;
-    border-color: black;
-    border-style: solid;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(24, 23, 23);
+  margin: auto;
+  display: flex;
+  position:absolute; /*El div será ubicado con relación a la pantalla*/
+  left:0px; /*A la derecha deje un espacio de 0px*/
+  right:0px; /*A la izquierda deje un espacio de 0px*/
+  bottom:0px; /*Abajo deje un espacio de 0px*/
+  height:15%; /*alto del div*/
+  z-index:0;
+  border-width: 10px;
+  align-items: center;
 }
 .busquedaContent{
     margin-left: 18%;
@@ -142,12 +152,9 @@ body{
     height: 100%;
     background-color:white;
     margin: auto;
-    text-align: left;
     padding: 10px;
     border-width: 5px;
-    border-color: black;
-    border-style: solid;
-
+    text-align: center;
 }
 .txtCategorias{
     margin-bottom: 20px;
@@ -156,19 +163,31 @@ body{
     font-size: 25px;
     font-family: 'Permanent Marker', cursive;
     color: black;
+    padding: 5px;
+    text-decoration: none;
+}
+.txtCategorias:hover{
+  background-color: #4f9;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
 }
 .imagenes{
     width: 160px;
     height: 160px;
     margin: auto;
     border-width: 3px;
-    border-color: black;
-    border-style: solid;
-    border-radius: 10px;
+    box-shadow: 0 0 20px white;
+
+    transition: width 2s, height 2s, transform 2s;
+}
+.imagenes:hover{
+  transform : scale(1.5);
+  box-shadow: 0 0 20px #4f9;
 }
 .icon{
     color: white;
     margin-left: 15px;
-    
+
 }
 /* @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); */

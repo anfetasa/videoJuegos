@@ -12,29 +12,29 @@
     <div id="cuadroletra1">
         <h1>Iniciar Sesion</h1>
         <label class="switchBtn">
-        <input type="checkbox" name="checkbox1"  onClick="recargar()" >
-            <div class="slide round" id="swiche">OFF</div>
+        <input type="checkbox" name="checkbox1"  onClick="recargar()"  >
+            <div class="slide round" id="swiche"></div>
         </label>
-        
+
     </div>
     <h2 id="letrasw">Vendedor On / Cliente Off</h2>
-    
-    <div *ngIf="load">
+
+    <div *ngIf="load" class="divdatos">
         <form [formGroup]="form" (ngSubmit)="onSubmit()" >
             <div class="form-group">
                 <label for="exampleInputEmail1">Correo</label>
                 <input formControlName="correo" type="email" class="form-control">
             </div>
-    
+
             <div class="form-group">
                 <label for="exampleInputPassword1">Contraseña</label>
                 <input formControlName="contraseña" type="password" class="form-control" >
             </div>
-    
-            <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+
+            <button type="submit" class="btn btn-primary" id="diniciar">Iniciar sesion</button>
         </form>
     </div>
-    
+
     <div *ngIf="!load" class="spinner-border text-primary" role="status">
         <span class="sr-only">Loading...</span>
     </div>
@@ -42,14 +42,14 @@
     <div>
         <img src="../assets/logo.png" alt="videojuegos" id="imagenLogo">
     </div>
-    
+
     <div class="box-portada">
         <img src="../assets/portada.jpg" alt="videojuegos" id="imagenAYP">
     </div>
 
 
     </div>
-    
+
 
 </body>
 

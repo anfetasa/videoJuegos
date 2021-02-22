@@ -23,7 +23,7 @@ body{
     border-color: black;
     border-style: solid;
     padding: auto;
-    
+
 }
 
 .field {
@@ -33,35 +33,33 @@ body{
     width:95%;
     flex-direction:row;
     box-shadow:
-     1px 1px 0 rgb(22, 160, 133),
-     2px 2px 0 rgb(22, 160, 133),
-     3px 3px 0 rgb(22, 160, 133),
-     4px 4px 0 rgb(22, 160, 133),
-     5px 5px 0 rgb(22, 160, 133),
-     6px 6px 0 rgb(22, 160, 133),
-     7px 7px 0 rgb(22, 160, 133)
+    1px 1px 0 rgb(22, 10, 30),
+    2px 2px 0 rgb(49, 19, 68),
+    3px 3px 0 rgb(110, 35, 158),
+    4px 4px 0 rgb(146, 45, 210),
+    5px 5px 0 rgb(79, 29, 110)
     ;
   }
-  
+
   .field>input[type=text],
   .field>button {
     display:block;
     font:1.2em 'Montserrat Alternates';
   }
-  
+
   .field>input[type=text] {
     flex:1;
     padding:0.6em;
-    border:0.2em solid rgb(26, 188, 156);
+    border:0.2em solid rgb(146, 45, 210);
   }
-  
+
   .field>button {
     padding:0.6em 0.8em;
-    background-color:rgb(26, 188, 156);
+    background-color:rgb(146, 45, 210);
     color:white;
     border:none;
   }
-  
+
   .busqueda{
       margin-left: 18%;
       margin-right: auto;
@@ -69,17 +67,17 @@ body{
       padding: 0px;
       width: 60%;
       height: 200px;
-      
-      
+
+
   }
 
+
   .myButton {
-	box-shadow: 3px 4px 0px 0px #29bbff;
-	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-	background-color:#2dabf9;
+
+  background-color: #740cb1;
 	border-radius:18px;
-	border:1px solid #ffffff;
-    width: 155px;
+  border:1px solid #941df5;
+  width: 200px;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -87,18 +85,16 @@ body{
 	font-size:17px;
 	padding:7px ;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #263666;
-    
+
 }
 .myButton:hover {
-	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
-	background-color:#0688fa;
+	background:linear-gradient(to bottom, #8c06fa 5%, #bf2df9 100%);
+	background-color:#8c06fa;
 }
 .myButton:active {
 	position:relative;
 	top:1px;
 }
-
 .perfil{
     margin-left: 0px;
     margin-top: 33px;
@@ -149,7 +145,7 @@ body{
 .icon{
     color: white;
     margin-left: 15px;
-    
+
 }
 
 .contenedor{
@@ -217,7 +213,7 @@ body{
 }
 .txtTitulo{
     margin-top:5%;
-    
+
     font-size: 30px;
     font-family: 'Permanent Marker', cursive;
     color: black;
