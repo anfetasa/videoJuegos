@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import {  ClientService } from '../Services/client.service';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import { environment } from '../../environments/environment';
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-login-user',
@@ -11,13 +12,15 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./login-user.component.css']
 })
 export class LoginUserComponent implements OnInit {
+  
   form: FormGroup;
-  load: boolean = true;
+  load: boolean = true; 
 
   constructor(
     private fb: FormBuilder, 
     private route: Router,
-    private client: ClientService) { }
+    private client: ClientService,
+    public auth: AuthService) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -41,9 +44,11 @@ export class LoginUserComponent implements OnInit {
           this.load = true;
           console.log(response);
 
-          localStorage.setItem('token', response.token)
-          console.log(localStorage.getItem('token'))
+          this.auth.login(response.token)
 
+          this.auth.setCourrentUser(response.name)
+
+          
 
           Swal.fire({
             icon: 'success',
