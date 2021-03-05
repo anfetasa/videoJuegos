@@ -32,15 +32,14 @@
     </div>
     <div class="cuerpo">
         <div class="contenedor">
-            <div class="contImagen">
-                <img src="https://i.pinimg.com/564x/e8/7e/c7/e87ec7f262f386e9c9d0749e6c6a390f.jpg" class="imagenes">
-            </div>
-            <div class="contTxtTitle">
-                <h1 class="txtTitulo">BATTLEFIELD 1</h1>
-            </div>
-            <div class="contTxtCuerpo">
-                <p class="txtCuerpo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia dolores ipsum eius officia doloremque officiis, tempora adipisci voluptate! Ea nemo eos voluptas maxime cupiditate voluptate illum culpa blanditiis id odio! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias hic neque nemo et, pariatur animi accusantium odit, sapiente laudantium obcaecati labore maiores ipsam tenetur molestias ad delectus ut vel aperiam!</p>
-                <button type="button" class="btn btn-dark" style="float: left;">Añadir al carrito</button>
+            <div class="card" style="width: 18rem;">
+                <!-- <img src="{{infojuego.urlImg}}" class="card-img-top"  alt="..."> -->
+                <div class=" card-body">
+                    <h5 class="card-title">{{infojuego.nombre}}</h5>
+                    <h5 class="card-title">Categoria: {{infojuego.categoria}}</h5>
+                    <p class="card-text">{{infojuego.descripcion}}</p>
+                    <h5 class="card-title">Precio: {{infojuego.precio}} COP</h5> 
+                </div> 
             </div>
         </div>
 

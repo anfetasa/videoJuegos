@@ -43,37 +43,26 @@
                         <a href="#"><h1 class="txtCategorias">Simulacion</h1></a>
                     </div>
                 </td>
-                <td>
-                    <img src="https://i.pinimg.com/564x/e8/7e/c7/e87ec7f262f386e9c9d0749e6c6a390f.jpg" class="imagenes">
-                </td>
-                <td>
-                    <img src="https://i.pinimg.com/564x/03/de/65/03de65dce38a63906059089c23309932.jpg" class="imagenes">
-                </td>
-                <td>
-                    <img src="https://i.pinimg.com/564x/22/0b/65/220b655b46775e81d634bd6b569cbce3.jpg" class="imagenes">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="https://i.pinimg.com/564x/e8/7e/c7/e87ec7f262f386e9c9d0749e6c6a390f.jpg" class="imagenes">
-                </td>
-                <td>
-                    <img src="https://i.pinimg.com/564x/03/de/65/03de65dce38a63906059089c23309932.jpg" class="imagenes">
-                </td>
-                <td>
-                    <img src="https://i.pinimg.com/564x/22/0b/65/220b655b46775e81d634bd6b569cbce3.jpg" class="imagenes">
-                </td>
-            </tr>
-            <tr>
-              <td>
-                  <img src="https://i.pinimg.com/564x/e8/7e/c7/e87ec7f262f386e9c9d0749e6c6a390f.jpg" class="imagenes">
-              </td>
-              <td>
-                  <img src="https://i.pinimg.com/564x/03/de/65/03de65dce38a63906059089c23309932.jpg" class="imagenes">
-              </td>
-              <td>
-                  <img src="https://i.pinimg.com/564x/22/0b/65/220b655b46775e81d634bd6b569cbce3.jpg" class="imagenes">
-              </td>
+                
+
+                    <table datatable [dtOptions]="dtOptions" class="table table-striped table-bordered row-border hover">
+                        <thead>
+                          <tr>
+                            <th>Nombre</th>
+                            <th>Categoria</th>
+                            <th>Ver más</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let juego of juegos">
+                            <td>{{juego.nombre}}</td>
+                            <td>{{juego.categoria}}</td>
+                            <td><a [routerLink]="['/comprar' , juego.id]" class="btn btn-primary">Ver mas</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    
+
           </tr>
         </table>
 

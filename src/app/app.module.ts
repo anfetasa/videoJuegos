@@ -13,6 +13,7 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PublicarComponent } from './publicar/publicar.component';
 import { ProductsComponent } from './products/products.component';
+import { DataTablesModule } from "angular-datatables";
 
 @NgModule({
   declarations: [
@@ -24,14 +25,16 @@ import { ProductsComponent } from './products/products.component';
     CarritoComponent,
     NavbarComponent,
     PublicarComponent,
-    ProductsComponent
+    ProductsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

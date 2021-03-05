@@ -46,7 +46,7 @@ export class LoginUserComponent implements OnInit {
 
           this.auth.login(response.token)
 
-          this.auth.setCourrentUser(response.name)
+          this.auth.setCourrentUser(response.correo)
 
           
 
