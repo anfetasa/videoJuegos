@@ -54,10 +54,10 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr *ngFor="let juego of juegos">
-                            <td>{{juego.nombre}}</td>
-                            <td>{{juego.categoria}}</td>
-                            <td><a [routerLink]="['/comprar' , juego.id]" class="btn btn-primary">Ver mas</a></td>
+                          <tr *ngFor="let dato of datos">
+                            <td>{{dato.nombre}}</td>
+                            <td>{{dato.categoria}}</td>
+                            <td><a [routerLink]="['/comprar' , dato.id]" class="btn btn-primary">Ver mas</a></td>
                           </tr>
                         </tbody>
                       </table>

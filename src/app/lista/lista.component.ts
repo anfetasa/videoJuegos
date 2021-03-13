@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { JUEGOS } from '../juegos.model'
 import { AuthService } from '../Services/auth.service';
+import { ClientService } from '../Services/client.service';
+import { environment } from '../../environments/environment';
 
 @Component({ 
   selector: 'app-lista',
@@ -10,10 +12,21 @@ import { AuthService } from '../Services/auth.service';
 export class ListaComponent implements OnInit {
   juegos : any = JUEGOS;
   dtOptions: DataTables.Settings = {};
+  datos;
 
-  constructor(public auth: AuthService) { }
+  constructor(public auth: AuthService, public view: ClientService) { }
+
+  getInformacion(){
+    this.view.getRequestAll(`${environment.BASE_API}/user/home`).subscribe(
+      (data):any => this.datos = data,
+      error => console.log("Error")
+    )
+  }
 
   ngOnInit(): void {
+
+    this.getInformacion();  
+
     this.dtOptions = {
       pagingType: 'full_numbers', 
       pageLength: 5,
