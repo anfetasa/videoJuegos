@@ -30,18 +30,22 @@
 
         </div>
     </div>
-    <div class="cuerpo">
-        <div class="contenedor">
-            <div class="card" style="width: 18rem;">
-                <!-- <img src="{{infojuego.urlImg}}" class="card-img-top"  alt="..."> -->
+
+    
+        <div class="cuerpo">
+            <div class="contenedor">
+                <div class="card" style="width: 18rem;">
+                    <div *ngFor="let dato of datos">
+                    <!-- <img src="{{infojuego.urlImg}}" class="card-img-top"  alt="..."> -->
                 <div class=" card-body">
-                    <h5 class="card-title">{{infojuego.nombre}}</h5>
-                    <h5 class="card-title">Categoria: {{infojuego.categoria}}</h5>
-                    <p class="card-text">{{infojuego.descripcion}}</p>
-                    <h5 class="card-title">Precio: {{infojuego.precio}} COP</h5> 
+                    <h5 class="card-title">{{dato.nombre}}</h5>
+                    <h5 class="card-title">Categoria: {{dato.categoria}}</h5>
+                    <p class="card-text">{{dato.descripcion}}</p>
+                    <h5 class="card-title">Precio: {{dato.precio}} COP</h5> 
                 </div> 
             </div>
         </div>
+    </div>
 
     </div>
     <div class="footer">
