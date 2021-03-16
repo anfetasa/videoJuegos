@@ -28,7 +28,7 @@ export class ComprarComponent implements OnInit {
     }
    
     async getDatos(id:number){
-      this.client.getRequestId(`${environment.BASE_API}/user/stock` + id).subscribe(
+      this.client.getRequestId(`${environment.BASE_API}/user/stock/` + id).subscribe(
         (data): any =>{
           this.datos = data
         },(error)=>{
