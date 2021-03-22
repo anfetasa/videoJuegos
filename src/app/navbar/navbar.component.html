@@ -12,15 +12,15 @@
               <a class="botonnav" [routerLink]= "['/carrito']">Carrito 🛒<span class="sr-only">(current)</span></a>
           </li>
           <hr>
-          <li  class="nav-item">
+          <li  *ngIf="!(auth.isLoggedIn() | async)" class="nav-item">
               <a class="botonnav" [routerLink]= "['/login']">Iniciar Sesion 🆔</a>
           </li>
           <hr>
-          <li class="nav-item">
+          <li *ngIf="!(auth.isLoggedIn() | async)" class="nav-item">
               <a class="botonnav" [routerLink]= "['/register']">Registrarse ✅</a>
           </li>
           <hr>
-          <li *ngIf="auth.isLoggedIn() | async" class="nav-item">
+          <li *ngIf="auth.isAdmin() | async" class="nav-item">
               <a class="botonnav" [routerLink]= "['/publicar']">Publicar Anuncio 💲</a>
           </li>
           <hr>

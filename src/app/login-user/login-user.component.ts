@@ -46,9 +46,7 @@ export class LoginUserComponent implements OnInit {
 
           this.auth.login(response.token)
 
-          this.auth.setCourrentUser(response.correo)
-
-          
+          this.auth.loginAdmin(response.tipousuario)
 
           Swal.fire({
             icon: 'success',

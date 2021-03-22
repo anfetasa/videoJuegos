@@ -8,39 +8,48 @@ import { BehaviorSubject, Observable } from "rxjs";
 export class AuthService {
   
   isLogin = new BehaviorSubject<boolean>(this.checkToken());
- 
-  admin = new BehaviorSubject<boolean>(null);
+
+  isAdm = new BehaviorSubject<boolean>(this.checkTipousuario())
+
+  valida:number
  
   private checkToken() : boolean {
     return !!localStorage.getItem('token');
+  }
+
+  private checkTipousuario() : boolean{
+    return !!localStorage.getItem('tipousuario')
   }
 
 
   login(token:string) : void {
 
     localStorage.setItem('token', token);
-    this.admin.next(true);
     this.isLogin.next(true);
 
   }
 
-
-  setCourrentUser(user:string) : void {
-    localStorage.setItem('courrentUser', user);
+  loginAdmin(tipousuario: string) : void{
+    localStorage.setItem('tipousuario', tipousuario);
+    this.isAdm.next(true);
   }
 
-  getCourrentUser() : string {
-    return localStorage.getItem('courrentUser');
-  }
-
-  private deleteCourrentUser() : void {
-    localStorage.removeItem('courrentUser');
+  validate(): void {
+    this.valida = Number(localStorage.getItem('tipousuario'));
+    console.log(this.valida);
+    if(this.valida == 1){
+      this.isAdm.next(true)
+    }else{
+      this.isAdm.next(false)
+    }
   }
 
   logout() : void {
     localStorage.removeItem('token');
-    this.deleteCourrentUser();
+    localStorage.removeItem('tipousuario');
+
     this.isLogin.next(false);
+    this.isAdm.next(false);
   }
 
   isLoggedIn() : Observable<boolean> {
@@ -48,7 +57,7 @@ export class AuthService {
    }
 
   isAdmin() : Observable<boolean> {
-    return this.admin.asObservable(); 
+    return this.isAdm.asObservable(); 
    }
 
 }
