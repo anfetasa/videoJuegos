@@ -13,7 +13,7 @@ import { environment } from '../../environments/environment';
 })
 export class RegisterUserComponent implements OnInit {
   form: FormGroup;
-  load: boolean = true;
+  load: boolean = true; 
 
   constructor(
     private fb: FormBuilder, 

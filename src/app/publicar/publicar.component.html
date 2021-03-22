@@ -14,105 +14,37 @@
 
     <div class="flex-container">
 
-    <div class="opcionesG">
-        <form class="formPersonal">
-            <fieldset>
-                <h2 id="letrasw">Incluye algunos detalles</h2>
-            <span class="textForm">Tipo:</span>
-              <div class="navbar-nav">
-            <input name="contact" class="boxOp" type="radio"  value="1" id="Nintendo">
-            <label class="labelsex activo" for="Nintendo">Nintendo</label>
+        <div *ngIf="load">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre del juego</label>
+                    <input formControlName="nombre" type="text" class="form-control">
+                </div>
+    
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Descripcion del juego</label>
+                    <input formControlName="descripcion" type="text" class="form-control" >
+                </div>
+    
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Precio</label>
+                    <input formControlName="precio" type="text" class="form-control" >
+                </div>
+    
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Categoria</label>
+                    <input formControlName="categoria" type="text" class="form-control" >
+                </div>
 
-            <input name="contact" class="boxOp" type="radio"  value="2" id="Playstation">
-            <label class="labelsex" for="Playstation">Playstation</label>
-
-            <input name="contact" class="boxOp" type="radio"  value="3" id="Xbox" >
-            <label class="labelsex" for="Xbox">Xbox</label>
-
-            <input name="contact" class="boxOp" type="radio"  value="4" id="Pc">
-            <label class="labelsex" for="Pc">Pc</label>
-
-            <input name="contact" class="boxOp" type="radio" value="5" id="otros" >
-            <label class="labelsex" for="otros">Otros</label>
-            </div>
-<br>
-            <div class="form__section">
-                <label for="Name">Titulo del juego</label>
-                <br>
-                <input type="text" class="form__input" placeholder="Battlefield V">
-            </div>
-
-<div class="div-precio" >
-
-    <label for="Name">Precio</label>
-<div id="monedap">
-
-                <select name="color" class="selectP">
-                <option>COP</option>
-                <option>USD</option>
-                <option>EUR</option>
-                <option>GBP</option>
-                </select>
-
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Url img</label>
+                    <input formControlName="img" type="text" class="form-control" >
+                </div>
+                
+    
+                <button type="submit" class="btn btn-primary" id="Publicar">publicar Juego</button>
+            </form>
         </div>
-        <div id="monedac">
-            <label for="Name">Cantidad</label>
-            <br>
-            <input type="number" class="form__input" placeholder="0.000000">
-        </div>
-        </div>
-        </fieldset>
-
-
-            <fieldset>
-                <div class="algo">
-                    <div class="perro">
-                        <img src="../assets/caratula.png" alt="videojuegos" id="imagencarat">
-                    </div>
-                    <div class="gato">
-                        <p>Battlefield V es un videojuego de disparos y acción bélica en primera
-                        persona​ desarrollado por DICE y distribuido por Electronic Arts. El videojuego
-                        fue lanzado el 20 de noviembre de 2018 en las plataformas PlayStation 4, Xbox
-                        One y Microsoft Windows.​</p>
-                    </div>
-                    </div>
-            <span class="textForm">Tipo:</span>
-
-            <input name="contact" class="tipo" type="radio"  value="6" id="Virtual">
-            <label class="tipolabel" for="Virtual">Virtual</label>
-
-            <input name="contact" class="tipo" type="radio"  value="7" id="Fisico">
-            <label class="tipolabel" for="Fisico">Fisico</label>
-            <br><br>
-            <label for="Name">Pais</label>
-            <p>
-                <select name="color" class="selectP">
-                <option>Argentina</option>
-                <option>Brasil</option>
-                <option>Colombia</option>
-                <option>Mexico</option>
-                </select>
-            </p>
-            <label for="Name">Ciudad</label>
-            <p>
-                <select name="color" class="selectP">
-                <option>Bogota</option>
-                <option>Medellin</option>
-                <option>Cali</option>
-                <option>Barranquilla</option>
-                </select>
-            </p>
-
-            <div >
-                <input type="submit" class="form__input" value="Publicar" id="diniciar">
-            </div>
-
-        </fieldset>
-        </form>
-
-
-    </div>
-
 
 
         <div>
