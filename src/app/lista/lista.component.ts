@@ -4,7 +4,7 @@ import { AuthService } from '../Services/auth.service';
 import { ClientService } from '../Services/client.service';
 import { environment } from '../../environments/environment';
 
-@Component({ 
+@Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
@@ -13,6 +13,7 @@ export class ListaComponent implements OnInit {
   juegos : any = JUEGOS;
   dtOptions: DataTables.Settings = {};
   datos;
+  filterPost = '';
 
   constructor(public auth: AuthService, public view: ClientService) { }
 
@@ -25,10 +26,10 @@ export class ListaComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.getInformacion();  
+    this.getInformacion();
 
     this.dtOptions = {
-      pagingType: 'full_numbers', 
+      pagingType: 'full_numbers',
       pageLength: 5,
       language: {
         url: "//cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json"

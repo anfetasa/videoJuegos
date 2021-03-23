@@ -14,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PublicarComponent } from './publicar/publicar.component';
 import { ProductsComponent } from './products/products.component';
 import { DataTablesModule } from "angular-datatables";
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DataTablesModule } from "angular-datatables";
     NavbarComponent,
     PublicarComponent,
     ProductsComponent,
+    FilterPipe,
 
   ],
   imports: [

@@ -6,7 +6,7 @@
             <tr>
                 <td colspan="4">
                     <div class="field" id="searchform">
-                        <input type="text" id="searchterm" placeholder="Que juego esta buscando?" />
+                        <input type="text" id="searchterm" placeholder="Que juego esta buscando?" [(ngModel)]="filterPost" name="filterPost" />
                         <button type="button" id="search">Buscar!</button>
                     </div>
                 </td>
@@ -43,18 +43,21 @@
                         <a href="#"><h1 class="txtCategorias">Simulacion</h1></a>
                     </div>
                 </td>
-                
 
-                    <table>
+                    <br>
+                    <br>
+
+                    <table class="table table-striped">
                         <thead>
                           <tr>
-                            <th>Nombre</th>
-                            <th>Categoria</th>
-                            <th>Ver más</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">imagenes</th>
+                            <th scope="col">Ver más</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr *ngFor="let dato of datos">
+                          <tr *ngFor="let dato of datos | filter:filterPost">
                             <td>{{dato.nombre}}</td>
                             <td>{{dato.categoria}}</td>
                             <td><img src={{dato.img}}></td>
@@ -62,7 +65,7 @@
                           </tr>
                         </tbody>
                       </table>
-                    
+
 
           </tr>
         </table>
