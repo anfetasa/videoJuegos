@@ -11,13 +11,10 @@
 <fieldset>
     <div id="cuadroletra1">
         <h1>Iniciar Sesion</h1>
-        <label class="switchBtn">
-        <input type="checkbox" name="checkbox1"  onClick="recargar()"  >
-            <div class="slide round" id="swiche"></div>
-        </label>
+
 
     </div>
-    <h2 id="letrasw">Vendedor On / Cliente Off</h2>
+
 
     <div *ngIf="load" class="divdatos">
         <form [formGroup]="form" (ngSubmit)="onSubmit()" >
@@ -53,9 +50,4 @@
 
 </body>
 
-<script>
-    var textodeldiv = document.getElementById("swiche").innerHTML;
-    function recargar(){
-    document.getElementById("swiche").innerHTML = "ON";
-}
-</script>
+

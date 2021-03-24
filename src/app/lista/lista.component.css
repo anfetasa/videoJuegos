@@ -6,7 +6,7 @@ body{
     margin: auto;
     position: absolute;
     width: 100%;
-    height: 100%;
+
     background-color: rgb(82, 82, 82) ;
     margin:0;
     padding:0;
@@ -22,7 +22,10 @@ body{
   padding: auto;
 
 }
-
+#vermas{
+  background-color: #8c06fa;
+  border-color: #8c06fa;
+}
 .field {
     display:flex;
     position:realtive;
@@ -30,13 +33,13 @@ body{
     width:95%;
     flex-direction:row;
     box-shadow:
-     1px 1px 0 rgb(22, 160, 133),
-     2px 2px 0 rgb(22, 160, 133),
-     3px 3px 0 rgb(22, 160, 133),
-     4px 4px 0 rgb(22, 160, 133),
-     5px 5px 0 rgb(22, 160, 133),
-     6px 6px 0 rgb(22, 160, 133),
-     7px 7px 0 rgb(22, 160, 133)
+    1px 1px 0 rgb(22, 160, 133),
+    2px 2px 0 rgb(22, 160, 133),
+    3px 3px 0 rgb(22, 160, 133),
+    4px 4px 0 rgb(22, 160, 133),
+    5px 5px 0 rgb(22, 160, 133),
+    6px 6px 0 rgb(22, 160, 133),
+    7px 7px 0 rgb(22, 160, 133)
     ;
   }
 
@@ -108,37 +111,11 @@ body{
 	top:1px;
 }
 
-.perfil{
-    margin-left: 0px;
-    margin-top: 33px;
-    margin-right: 5%;
-    width: 200px;
-    height: 100px;
-    float: left;
+#titulos_tabla{
+  background-color: #8c06fa;
+  color: #ffffff;
 }
-.cuerpo{
-  background-color: rgb(82, 82, 82);
-  width: 100%;
-  position:absolute;
-  height: 75%;
-  padding: 10px;
-  margin: auto;
-}
-.footer{
-  width: 100%;
-  padding: 20px;
-  background-color: rgb(24, 23, 23);
-  margin: auto;
-  display: flex;
-  position:absolute; /*El div será ubicado con relación a la pantalla*/
-  left:0px; /*A la derecha deje un espacio de 0px*/
-  right:0px; /*A la izquierda deje un espacio de 0px*/
-  bottom:0px; /*Abajo deje un espacio de 0px*/
-  height:15%; /*alto del div*/
-  z-index:0;
-  border-width: 10px;
-  align-items: center;
-}
+
 .busquedaContent{
     margin-left: 18%;
     margin-top: 0px;
@@ -146,6 +123,7 @@ body{
     padding: 0px;
     width: 60%;
     height: 90%;
+    background-color: #ffffff;
 }
 .categorias{
     width: 100%;
@@ -167,7 +145,7 @@ body{
     text-decoration: none;
 }
 .txtCategorias:hover{
-  background-color: #4f9;
+  background-color: #8c06fa;
   border-radius: 10px;
   color: white;
   text-decoration: none;
@@ -189,5 +167,9 @@ body{
     color: white;
     margin-left: 15px;
 
+}
+
+#list-inicio{
+  width: 1000px;
 }
 /* @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); */

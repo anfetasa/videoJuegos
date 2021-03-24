@@ -15,6 +15,7 @@ import { PublicarComponent } from './publicar/publicar.component';
 import { ProductsComponent } from './products/products.component';
 import { DataTablesModule } from "angular-datatables";
 import { FilterPipe } from './pipes/filter.pipe';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     PublicarComponent,
     ProductsComponent,
     FilterPipe,
+    FooterComponent,
 
   ],
   imports: [
