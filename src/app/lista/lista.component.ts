@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { JUEGOS } from '../juegos.model'
 import { AuthService } from '../Services/auth.service';
 import { ClientService } from '../Services/client.service';
 import { environment } from '../../environments/environment';
@@ -10,7 +9,6 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./lista.component.css']
 })
 export class ListaComponent implements OnInit {
-  juegos : any = JUEGOS;
   dtOptions: DataTables.Settings = {};
   datos;
   filterPost = '';

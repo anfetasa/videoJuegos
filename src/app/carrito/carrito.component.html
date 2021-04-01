@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<title>Hello_Game</title>
+<title>Hello_Game</title> 
 <body>
   <div class="header">
       <table class="busqueda">
@@ -32,71 +32,35 @@
   </div>
   <div class="cuerpo">
       <div class="contenedor">
-          <table class="carrito">
-            <br>
-              <tr class="degradado1">
-                  <td class="celda2">
-                      <img src="https://i.pinimg.com/564x/e8/7e/c7/e87ec7f262f386e9c9d0749e6c6a390f.jpg" class="imagenes">
-                  </td>
-                  <td class="celda1">
-                      <p class="txtTitulo">BATTLEFIELD 1</p>
-                  </td>
-                  <td class="celda2">
-                      <P class="txtPrecio">COP $20.000</P>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                        </svg>
-                  </td>
-                  <td class="celda2">
-                      <button type="button" class="btn btn-success">Comprar</button>
-                  </td>
-              </tr>
-              <br>
-              <tr class="degradado1">
-                  <td class="celda2">
-                      <img src="https://i.pinimg.com/564x/e8/7e/c7/e87ec7f262f386e9c9d0749e6c6a390f.jpg" class="imagenes">
-                  </td>
-                  <td class="celda1">
-                      <p class="txtTitulo">BATTLEFIELD 1</p>
-                  </td>
-                  <td class="celda2">
-                      <P class="txtPrecio">COP $20.000</P>
-                      <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                        </svg>
-                  </td>
-                  <td class="celda2">
-                      <button type="button" class="btn btn-success">Comprar</button>
-                  </td>
-              </tr>
-              <br>
-              <tr class="degradado1">
-                <td class="celda2">
-                    <img src="https://i.pinimg.com/564x/e8/7e/c7/e87ec7f262f386e9c9d0749e6c6a390f.jpg" class="imagenes">
-                </td>
-                <td class="celda1">
-                    <p class="txtTitulo">BATTLEFIELD 1</p>
-                </td>
-                <td class="celda2">
-                    <P class="txtPrecio">COP $20.000</P>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                      </svg>
-                </td>
-                <td class="celda2">
-                    <button type="button" class="btn btn-success">Comprar</button>
-                </td>
+
+        <table class="table table-striped">
+          <thead>
+            <tr id="titulos_tabla">
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Imagen</th>
+              <th scope="col">Options</th>
             </tr>
-            <br>
-              <tr class="degradado3">
-                  <td colspan="3">
-                      <p class="txtPrecio">Realizar compra de todos los productos por un valor de: COP $60.000</p>
-                  </td>
-                  <td class="celda2">
-                      <button type="button" class="btn btn-warning">Comprar Todos</button>
-                  </td>
+          </thead>
+          <tbody>
+            <ng-container *ngIf = "findDatos">
+              <tr *ngFor="let dato of datos">
+                <td>{{dato.nombre}}</td>
+                <td>{{dato.precio}}</td>
+                <td><img src={{dato.img}}></td>
+                <td><button class="btn btn-danger" (click)="deleteProduct(dato.idRegistro)">Eliminar</button></td>
               </tr>
-          </table>
+
+              <button class="btn btn-success" (click)="comprarProduct()">Comprar</button>
+
+            </ng-container>
+           <ng-container *ngIf ="!findDatos">
+            <h4>No hay juegos en el carrito</h4>
+           </ng-container>
+          </tbody>
+        </table>
+
+            
       </div>
 
   </div>

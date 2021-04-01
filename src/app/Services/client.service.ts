@@ -22,18 +22,23 @@ export class ClientService {
     return this.http.get(route, config);
   }
 
-  postRequest(route: string, data?:any, token?:string) {
+  postRequest(route: string, data?: any, token?: string) {
+    if (token) {
+      let config = {
+        responseType: 'json',
+      };
+      let headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      });
 
-    let config:any = {
-      responseType: "json"
+      return this.http.post(route, data, { headers });
+    } else {
+      let config: any = {
+        responseType: 'json',
+      };
+      return this.http.post(route, data, config);
     }
-
-    if (token){
-      const header = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-      config["header"] = header;
-    }
-
-    return this.http.post(route, data, config);
   }
 
   getRequestAll(route: string) {
@@ -53,5 +58,15 @@ export class ClientService {
     config["header"] = header;
     return  this.http.get(route, config);
   }
+
+  deleteRequestId (route: string) {
+    let config:any = {
+      responseType: "json"
+    }  
+    const header = new HttpHeaders().set('Authorization', '57ydf544ljka559ahjkfgd1');
+    config["header"] = header;
+    return  this.http.delete(route, config);
+  }
+
 }
  
