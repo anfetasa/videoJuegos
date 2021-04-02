@@ -12,6 +12,10 @@
               <a class="botonnav" [routerLink]= "['/carrito']">Carrito 🛒<span class="sr-only">(current)</span></a>
           </li>
           <hr>
+          <li *ngIf="auth.isLoggedIn() | async" class="nav-item active">
+            <a class="botonnav" [routerLink]= "['/historial']">Historial 🛒<span class="sr-only">(current)</span></a>
+        </li>
+          <hr>
           <li  *ngIf="!(auth.isLoggedIn() | async)" class="nav-item">
               <a class="botonnav" [routerLink]= "['/login']">Iniciar Sesion 🆔</a>
           </li>

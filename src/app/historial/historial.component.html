@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<table class="table table-striped">
+    <thead>
+      <tr id="titulos_tabla">
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf = "findDatos">
+        <tr *ngFor="let dato of datos">
+          <td>{{dato.nombre}}</td>
+          <td>{{dato.precio}}</td>
+          <td><img src={{dato.img}}></td>
+        </tr>
+
+      </ng-container>
+     <ng-container *ngIf ="!findDatos">
+      <h4>No hay productos comprados</h4>
+     </ng-container>
+    </tbody>
+  </table>
+
+        

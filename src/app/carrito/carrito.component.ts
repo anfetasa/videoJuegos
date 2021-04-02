@@ -68,19 +68,34 @@ export class CarritoComponent implements OnInit {
   }
 
   comprarProduct(){
-    this.view.postRequest(`${environment.BASE_API}/user/buyStock`, {juegos: this.datos}, localStorage.getItem("token")
-    ).subscribe(
-      (data: any) => {
-        try {
-          if(data[0].id){
-            this.findDatos = true;
-            this.datos = data;
+
+    Swal.fire({
+      icon: 'question',
+      title: 'Desea comprar este producto?',
+      showDenyButton: true,
+      denyButtonText: `Cancelar compra`,
+      showConfirmButton: true,
+      confirmButtonText: `Aceptar`
+    }).then((result) => {
+      //Read more about isConfirmed, isDenied below
+      if (result.isConfirmed) {
+        this.view.postRequest(`${environment.BASE_API}/user/buyStock`, {juegos: this.datos}, localStorage.getItem("token")
+      ).subscribe(
+        (data: any) => {
+          try {
+            if(data[0].id){
+              this.findDatos = true;
+              this.datos = data;
+            }
+          } catch (error) {
+            this.findDatos = false;
           }
-        } catch (error) {
-          this.findDatos = false;
         }
+      )
+        this.route.navigate( ['/historial'])
       }
-    )
+    })
+
   }
 
 }

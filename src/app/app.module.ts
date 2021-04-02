@@ -16,6 +16,7 @@ import { ProductsComponent } from './products/products.component';
 import { DataTablesModule } from "angular-datatables";
 import { FilterPipe } from './pipes/filter.pipe';
 import { FooterComponent } from './footer/footer.component';
+import { HistorialComponent } from './historial/historial.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FooterComponent } from './footer/footer.component';
     ProductsComponent,
     FilterPipe,
     FooterComponent,
+    HistorialComponent,
 
   ],
   imports: [

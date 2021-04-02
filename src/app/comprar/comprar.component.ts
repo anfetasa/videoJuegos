@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class ComprarComponent implements OnInit {
 
   datos;
-
+ 
   constructor(
     private router : ActivatedRoute, 
     private client: ClientService,
