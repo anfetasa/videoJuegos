@@ -1,0 +1,12 @@
+#titulos_tabla{
+  font-size: 25px;
+  background-color: #8c06fa;
+  color: #ffffff;
+  border-radius: 10px;
+}
+#tabla{
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  font-size: 25px;
+}

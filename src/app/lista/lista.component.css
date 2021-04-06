@@ -1,13 +1,11 @@
 @import url('http://fonts.googleapis.com/css?family=Montserrat+Alternates');
 
 body{
-  font-family: 'Balsamiq Sans', cursive;
     margin-top: 1px;
     margin: auto;
     position: absolute;
     width: 100%;
-
-    background-color: rgb(82, 82, 82) ;
+    background-color: rgb(255, 255, 255) ;
     margin:0;
     padding:0;
 }
@@ -16,20 +14,27 @@ body{
   margin: auto;
   width: 100%;
   position:relative;
-  height: 16%;
+  height: 20%;
   background-color: rgb(24, 23, 23);
-  border-width: 10px;
-  padding: auto;
 
 }
+
+#tabla_contenido_lista{
+  font-size: 25px;
+}
+
+
 #vermas{
+  text-align: center;
   background-color: #8c06fa;
   border-color: #8c06fa;
+  font-size: 20px;
 }
 .field {
     display:flex;
-    position:realtive;
+    position:relative;
     margin:auto;
+    height: 50px;
     width:95%;
     flex-direction:row;
     box-shadow:
@@ -46,11 +51,12 @@ body{
   .field>input[type=text],
   .field>button {
     display:block;
-    font:1.2em 'Montserrat Alternates';
+
   }
 
   .field>input[type=text] {
     flex:1;
+    height: 50px;
     padding:0.6em;
     border:0.2em solid rgb(26, 188, 156);
   }
@@ -77,8 +83,7 @@ body{
       text-align: center;
       padding: 0px;
       width: 60%;
-      height: 200px;
-
+      height: 90px;
 
   }
 
@@ -94,7 +99,7 @@ body{
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
-    font-family:Arial;
+
     font-size:17px;
     padding:7px ;
     text-decoration:none;
@@ -114,14 +119,15 @@ body{
 #titulos_tabla{
   background-color: #8c06fa;
   color: #ffffff;
+  border-radius: 10px;
 }
 
 .busquedaContent{
-    margin-left: 18%;
+    margin-left: 8%;
     margin-top: 0px;
     text-align: center;
     padding: 0px;
-    width: 60%;
+    width: 80%;
     height: 90%;
     background-color: #ffffff;
 }
@@ -139,7 +145,6 @@ body{
     margin-left: auto;
     margin-right: auto;
     font-size: 25px;
-    font-family: 'Permanent Marker', cursive;
     color: black;
     padding: 5px;
     text-decoration: none;
@@ -173,3 +178,8 @@ body{
   width: 1000px;
 }
 /* @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); */
+
+footer{
+  background-color: rgb(24, 23, 23);
+  color: #ffffff;
+}

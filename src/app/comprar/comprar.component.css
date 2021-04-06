@@ -41,7 +41,7 @@ body{
   .field>input[type=text],
   .field>button {
     display:block;
-    font:1.2em 'Montserrat Alternates';
+
   }
 
   .field>input[type=text] {
@@ -78,7 +78,6 @@ body{
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
 	font-size:17px;
 	padding:7px ;
 	text-decoration:none;
@@ -130,7 +129,6 @@ body{
     margin-left: auto;
     margin-right: auto;
     font-size: 25px;
-    font-family: 'Permanent Marker', cursive;
     color: black;
 }
 .imagenes{
@@ -196,12 +194,15 @@ body{
     margin-top:5%;
 
     font-size: 30px;
-    font-family: 'Permanent Marker', cursive;
     color: black;
 }
 
 .txtCuerpo{
     font-size: 15px;
     color: black;
-    font-family: 'Times New Roman', Times, serif;
+
+}
+footer{
+  background-color: rgb(24, 23, 23);
+  color: #ffffff;
 }

@@ -1,5 +1,4 @@
 body{
-  font-family: 'Balsamiq Sans', cursive;
   color: #ccc;
 }
 
@@ -116,6 +115,7 @@ input:checked + .slide:before {
   background-color: #8000ff;
   padding: 30px;
   width: 300px;
+  border: none;
   border-radius: 10px;
   box-shadow:
   1px 1px 0 rgb(0, 0, 0),
@@ -159,9 +159,7 @@ input:checked + .slide:before {
   margin: 20px 0;
   border: none;
   border: 5px #000000 solid;
-
   border-radius: 10px;
-  font-family: 'Balsamiq Sans', cursive;
 }
 
 .form__input:focus{
