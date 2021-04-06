@@ -5,9 +5,6 @@
       <table class="busqueda">
           <tr>
               <td colspan="4">
-                  <div class="field" id="searchform">
-                      <input type="text" id="searchterm" placeholder="Que juego esta buscando?" />
-                  </div>
               </td>
           </tr>
       </table>
@@ -33,7 +30,10 @@
                 <td><button class="btn btn-danger" (click)="deleteProduct(dato.idRegistro)">Eliminar</button></td>
               </tr>
 
-              <button class="btn btn-success" (click)="comprarProduct()">Comprar</button>
+              <div class="button-container-2">
+                <span class="mas">Comprar</span>
+              <button type="button" name="Hover" (click)="comprarProduct()">Comprar</button>
+            </div>
 
             </ng-container>
            <ng-container *ngIf ="!findDatos">

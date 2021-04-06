@@ -206,3 +206,19 @@ footer{
   background-color: rgb(24, 23, 23);
   color: #ffffff;
 }
+
+.contenedor{
+    margin-left: 35%;
+    text-align: center;
+}
+
+.contenedor img{
+    border-radius: 50%;
+    border-style: solid;
+    width: 70%;
+    margin-top: 5%
+}
+
+.botAgg{
+    margin-left: 35%;
+}

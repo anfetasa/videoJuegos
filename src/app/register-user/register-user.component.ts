@@ -71,6 +71,17 @@ export class RegisterUserComponent implements OnInit {
 
     } else {
 
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops',
+        showConfirmButton: true,
+        confirmButtonText: `Ok`
+      }).then((result) => {
+        //Read more about isConfirmed, isDenied below
+        if (result.isConfirmed) {
+          this.route.navigate( ['/register'])
+        } 
+      })
       console.log("Form error");
     }
 

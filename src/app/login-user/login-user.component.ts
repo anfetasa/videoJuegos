@@ -72,6 +72,17 @@ export class LoginUserComponent implements OnInit {
 
     } else {
 
+      Swal.fire({
+        icon: 'error',
+        title: 'El correo o la contraseña son incorrectos',
+        showConfirmButton: true,
+        confirmButtonText: `Ok`
+      }).then((result) => {
+        //Read more about isConfirmed, isDenied below
+        if (result.isConfirmed) {
+          this.route.navigate( ['/login'])
+        } 
+      })
       console.log("Form error");
     }
 

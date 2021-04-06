@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  BASE_API: 'http://localhost:5000/api/v01'
+  BASE_API: 'http://localhost:5000/api/v01' 
 };
 /*
  * For easier debugging in development mode, you can import the following file

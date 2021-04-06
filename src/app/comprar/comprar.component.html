@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<title>Hello_Game</title>
+<title>Hello_Game</title> 
   <body>
     <div class="header">
         <table class="busqueda">
@@ -17,7 +17,7 @@
 
         <div class="cuerpo">
             <div class="contenedor">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 30%;">
                     <div *ngFor="let dato of datos">
                     <img src="{{dato.img}}" class="card-img-top">
                 <div class=" card-body">
@@ -25,7 +25,7 @@
                     <h5 class="card-title">Categoria: {{dato.categoria}}</h5>
                     <p class="card-text">{{dato.descripcion}}</p>
                     <h5 class="card-title">Precio: {{dato.precio}} COP</h5>
-                    <td><a (click) = "agregarProducto(dato.id)" class="btn btn-primary">Añadir al Carrito</a></td>
+                    <button (click) = "agregarProducto(dato.id)" class="btn btn-primary">Añadir al Carrito</button>
                 </div>
             </div>
         </div>
